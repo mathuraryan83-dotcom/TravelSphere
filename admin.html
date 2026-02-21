@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+<h1>All Bookings</h1>
+<div id="data"></div>
+
+<script>
+let bookings = JSON.parse(localStorage.getItem("bookings")) || "";
+
+let output = "";
+bookings.forEach(b=>{
+    output += `
+    <p>
+    ID: ${b.id} |
+    Name: ${b.name} |
+    Place: ${b.place} |
+    Price: ${b.price}
+    </p>
+    `;
+});
+
+document.getElementById("data").innerHTML = output;
+</script>
+<a href="admin.html">Admin</a>
+<script src="script.js"></script>
+</body>
+</html>

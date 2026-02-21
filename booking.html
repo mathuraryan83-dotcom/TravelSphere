@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking | TravelSphere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">TravelSphere</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ===== BOOKING SECTION ===== -->
+<section class="booking-section">
+
+    <div class="booking-card">
+        <h1>Book Your Dream Trip ✈️</h1>
+        <p>Fill in your details to confirm your journey</p>
+
+        <form id="bookingForm" class="booking-form">
+
+            <div class="form-row">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="form-row">
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+
+                <select id="destination" required>
+                    <option value="">Select Destination</option>
+                    <option>Paris</option>
+                    <option>Dubai</option>
+                    <option>Maldives</option>
+                    <option>New York</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <input type="date" id="date" required>
+                <textarea id="message" placeholder="Additional Message"></textarea>
+            </div>
+
+            <button type="submit" class="btn-glow">
+                Confirm Booking
+            </button>
+
+        </form>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 TravelSphere | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

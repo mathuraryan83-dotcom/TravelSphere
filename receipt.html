@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Ticket</title>
+<link rel="stylesheet" href="style.css">
+
+
+
+<style>
+body{
+    font-family:Arial;
+    background:linear-gradient(120deg,#6fb1fc,#4364f7);
+    color:white;
+    text-align:center;
+}
+.ticket{
+    background:white;
+    color:black;
+    width:350px;
+    margin:80px auto;
+    padding:25px;
+    border-radius:10px;
+}
+button{
+    padding:10px 25px;
+    border:none;
+    border-radius:20px;
+    background:#ff7eb3;
+    color:white;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="ticket">
+<h2>Travel Ticket</h2>
+
+<p><b>Name:</b> <span id="name"></span></p>
+<p><b>Email:</b> <span id="email"></span></p>
+<p><b>Mobile:</b> <span id="mobile"></span></p>
+<p><b>Destination:</b> <span id="destination"></span></p>
+
+<button onclick="downloadTicket()">Download Ticket (PDF)</button>
+</div>
+
+<script>
+document.getElementById("name").innerText = localStorage.getItem("ticketName");
+document.getElementById("email").innerText = localStorage.getItem("ticketEmail");
+document.getElementById("mobile").innerText = localStorage.getItem("ticketMobile");
+document.getElementById("destination").innerText = localStorage.getItem("ticketDestination");
+
+function downloadTicket(){
+    window.print();   // browser se PDF save option
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>

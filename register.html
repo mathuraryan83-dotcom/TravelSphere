@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+
+
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(120deg,#4facfe,#00f2fe);
+    font-family:Arial;
+}
+.box{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+input{
+    width:250px;
+    padding:10px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+}
+button{
+    padding:10px 30px;
+    border:none;
+    border-radius:20px;
+    background:#ff7eb3;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Register</h2>
+
+<input type="text" id="username" placeholder="Username"><br>
+<input type="password" id="password" placeholder="Password"><br>
+
+<button onclick="register()">Register</button>
+<p>Already account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+function register(){
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+localStorage.setItem("username",user);
+localStorage.setItem("password",pass);
+
+alert("Registered Successfully");
+window.location="login.html";
+}
+</script>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

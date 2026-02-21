@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Bookings</title>
+<link rel="stylesheet" href="style.css">
+
+
+
+<style>
+body{
+    font-family:Arial;
+    text-align:center;
+    background:linear-gradient(120deg,#6fb1fc,#4364f7);
+    color:white;
+}
+.table{
+    background:white;
+    color:black;
+    width:70%;
+    margin:50px auto;
+    padding:20px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>My Bookings</h2>
+
+<div class="table">
+<table border="1" width="100%" id="bookingTable">
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Mobile</th>
+<th>Destination</th>
+</tr>
+</table>
+</div>
+
+<script>
+var bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+var table = document.getElementById("bookingTable");
+
+bookings.forEach(function(b){
+    var row = table.insertRow();
+    row.insertCell(0).innerText = b.name;
+    row.insertCell(1).innerText = b.email;
+    row.insertCell(2).innerText = b.mobile;
+    row.insertCell(3).innerText = b.destination;
+});
+</script>
+<script>
+if(localStorage.getItem("loggedIn") !== "true"){
+window.location="login.html";
+}
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
