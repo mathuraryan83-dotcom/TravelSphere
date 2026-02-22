@@ -176,3 +176,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+document.getElementById("bookingForm").addEventListener("submit", function() {
+
+  gtag('event', 'booking_submit', {
+    event_category: 'booking',
+    event_label: 'TravelSphere Booking'
+  });
+
+});
