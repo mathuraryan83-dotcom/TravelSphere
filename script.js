@@ -97,40 +97,52 @@ function showSlide() {
 if (slides.length > 0) {
     setInterval(showSlide, 3000);
 }
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("bookingForm");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    if (form) {
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const destination = document.getElementById("destination").value;
-        const date = document.getElementById("date").value;
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        if (name === "" || email === "" || phone === "" || destination === "" || date === "") {
-            alert("Please fill all required fields.");
-            return;
-        }
+            const name = document.getElementById("name")?.value.trim() || "";
+            const email = document.getElementById("email")?.value.trim() || "";
+            const phone = document.getElementById("phone")?.value.trim() || "";
+            const destination = document.getElementById("destination")?.value || "";
+            const date = document.getElementById("date")?.value || "";
 
-        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-        if (!email.match(emailPattern)) {
-            alert("Please enter a valid email address.");
-            return;
-        }
+            // Required fields check
+            if (!name || !email || !phone || !destination || !date) {
+                alert("Please fill all required fields.");
+                return;
+            }
 
-        if (phone.length < 10) {
-            alert("Please enter a valid phone number.");
-            return;
-        }
+            // Email validation
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-        alert("🎉 Booking Confirmed Successfully!");
-        form.reset();
-    });
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Phone validation
+            if (phone.length < 10 || isNaN(phone)) {
+                alert("Please enter a valid phone number.");
+                return;
+            }
+
+            // Success
+            alert("Booking submitted successfully!");
+
+            form.reset();
+        });
+
+    }
 
 });
+
 // ===== CONTACT FORM VALIDATION =====
 
 document.addEventListener("DOMContentLoaded", function () {
