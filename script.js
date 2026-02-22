@@ -134,6 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             // Success
+            if (typeof gtag === "function") {
+  gtag('event', 'booking_submit', {
+    event_category: 'booking',
+    event_label: 'TravelSphere Booking'
+  });
+}
             alert("Booking submitted successfully!");
 
             form.reset();
