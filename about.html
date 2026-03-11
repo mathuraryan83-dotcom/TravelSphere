@@ -1,71 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About | TravelSphere</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | TravelSphere</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#1e3c72,#2a5298);
+  color:white;
+}
+
+/* Navbar */
+nav{
+  background:#1b2a4a;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:60px 20px 30px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  opacity:0.9;
+}
+
+/* Cards Section */
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius:16px;
+  padding:30px 20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h2{
+  margin-bottom:15px;
+  font-size:22px;
+}
+
+.card p{
+  opacity:0.9;
+  line-height:1.6;
+}
+
+/* Footer */
+footer{
+  background:black;
+  text-align:center;
+  padding:18px;
+  margin-top:60px;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-    <div class="nav-container">
-        <div class="logo">TravelSphere</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</header>
+<nav>
+  <div class="logo">TravelSphere</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="destinations.html">Destinations</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-<!-- ===== HERO SECTION ===== -->
-<section class="about-hero">
-    <div class="about-overlay">
-        <h1>About TravelSphere</h1>
-        <p>We help travelers explore the world comfortably and affordably.</p>
-    </div>
+<section class="hero">
+  <h1>About TravelSphere</h1>
+  <p>We help travelers explore the world comfortably and affordably.</p>
 </section>
 
-<!-- ===== ABOUT CONTENT ===== -->
-<section class="about-cards">
+<section class="container">
 
-    <div class="about-card">
-        <h2>Our Mission</h2>
-        <p>
-            To provide trusted and memorable travel experiences 
-            that bring joy and comfort to every traveler.
-        </p>
-    </div>
+  <div class="card">
+    <h2>🌍 Our Mission</h2>
+    <p>
+      To provide trusted and memorable travel experiences that bring joy
+      and comfort to every traveler.
+    </p>
+  </div>
 
-    <div class="about-card">
-        <h2>Our Vision</h2>
-        <p>
-            To become India’s most reliable and innovative 
-            travel platform for global exploration.
-        </p>
-    </div>
+  <div class="card">
+    <h2>🚀 Our Vision</h2>
+    <p>
+      To become India’s most reliable and innovative travel platform
+      for global exploration.
+    </p>
+  </div>
 
-    <div class="about-card">
-        <h2>Our Values</h2>
-        <p>
-            Trust, transparency, comfort and customer satisfaction 
-            guide everything we do.
-        </p>
-    </div>
+  <div class="card">
+    <h2>🤝 Our Values</h2>
+    <p>
+      Trust, transparency, comfort and customer satisfaction
+      guide everything we do.
+    </p>
+  </div>
 
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-    <p>© 2026 TravelSphere | All Rights Reserved</p>
+<footer>
+  © 2026 TravelSphere | All Rights Reserved
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>

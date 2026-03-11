@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
     <meta charset="UTF-8">
     <title>Booking | TravelSphere</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,5 +73,20 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // page reload rokne ke liye
+
+    // GA4 Event Fire
+    gtag('event', 'booking_submit', {
+        event_category: 'Booking',
+        event_label: 'Travel Booking Form'
+    });
+
+    alert("Booking submitted successfully!");
+
+    this.reset();
+});
+</script>
 </body>
 </html>
