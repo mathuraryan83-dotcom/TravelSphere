@@ -1,55 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact | TravelSphere</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | TravelSphere</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+  background:#f5f5f5;
+}
+
+/* TITLE */
+.page-title{
+  text-align:center;
+  padding:120px 20px 40px;
+}
+
+.page-title h1{
+  font-size:40px;
+}
+
+/* CONTACT BOX */
+.contact-box{
+  max-width:500px;
+  margin:0 auto 80px;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* BUTTON */
+.send-btn{
+  width:100%;
+  padding:12px;
+  background:#ff7eb3;
+  color:white;
+  border:none;
+  border-radius:20px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* INFO */
+.contact-info{
+  text-align:center;
+  margin-top:20px;
+  color:#555;
+}
+</style>
+
 </head>
+
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-    <div class="nav-container">
-        <div class="logo">TravelSphere</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="booking.html">Booking</a></li>
-        </ul>
-    </div>
+<!-- NAVBAR -->
+<header>
+  <div class="logo">TravelSphere</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="booking.html">Booking</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<!-- ===== CONTACT SECTION ===== -->
-<section class="contact-section">
-
-    <div class="contact-card">
-        <h1>Contact Us 📩</h1>
-        <p>We would love to hear from you</p>
-
-        <form id="contactForm" class="contact-form">
-
-            <div class="form-row">
-                <input type="text" id="cname" placeholder="Your Name" required>
-                <input type="email" id="cemail" placeholder="Your Email" required>
-            </div>
-
-            <textarea id="cmessage" placeholder="Your Message" required></textarea>
-
-            <button type="submit" class="btn-glow">
-                Send Message
-            </button>
-
-        </form>
-    </div>
-
+<!-- TITLE -->
+<section class="page-title">
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you</p>
 </section>
 
-<footer class="footer">
-    <p>© 2026 TravelSphere | All Rights Reserved</p>
-</footer>
+<!-- FORM -->
+<div class="contact-box">
 
-<script src="script.js"></script>
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea rows="5" placeholder="Your Message"></textarea>
+
+  <button class="send-btn" onclick="sendMsg()">Send Message</button>
+
+  <div class="contact-info">
+    <p>📧 travelsphere@email.com</p>
+    <p>📞 +91 98765 43210</p>
+  </div>
+
+</div>
+
+<script>
+function sendMsg(){
+  alert("Message sent successfully!");
+}
+</script>
+
 </body>
 </html>
