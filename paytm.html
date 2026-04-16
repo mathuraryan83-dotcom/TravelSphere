@@ -20,7 +20,7 @@ body{
 
 /* BOX */
 .payment-box{
-  width:350px;
+  width:360px;
   background:white;
   padding:30px;
   border-radius:20px;
@@ -48,6 +48,11 @@ body{
 
 .method:hover{
   background:#eaeaea;
+}
+
+.method.active{
+  border:2px solid #6a5af9;
+  background:#eef0ff;
 }
 
 /* LOGO */
@@ -85,9 +90,20 @@ body{
 
   <h2>Select Payment Method</h2>
 
-  <div class="method">💳 Paytm</div>
-  <div class="method">📱 PhonePe</div>
-  <div class="method">💰 Google Pay</div>
+  <div class="method" onclick="selectMethod(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Paytm_logo.png">
+    <span>Paytm</span>
+  </div>
+
+  <div class="method" onclick="selectMethod(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/PhonePe_Logo.svg">
+    <span>PhonePe</span>
+  </div>
+
+  <div class="method" onclick="selectMethod(this)">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Pay_Logo.svg">
+    <span>Google Pay</span>
+  </div>
 
   <button class="pay-btn" onclick="payNow()">Pay Now</button>
 
@@ -98,7 +114,18 @@ body{
 </div>
 
 <script>
+function selectMethod(el){
+  document.querySelectorAll('.method').forEach(m => m.classList.remove('active'));
+  el.classList.add('active');
+}
+
 function payNow(){
+  const selected = document.querySelector('.method.active');
+  if(!selected){
+    alert("Please select a payment method!");
+    return;
+  }
+
   document.getElementById("successMsg").style.display = "block";
 }
 </script>
