@@ -1,92 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
-    <meta charset="UTF-8">
-    <title>Booking | TravelSphere</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking | TravelSphere</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+  background:#f5f5f5;
+}
+
+/* PAGE TITLE */
+.page-title{
+  text-align:center;
+  padding:120px 20px 40px;
+}
+
+/* FORM BOX */
+.booking-box{
+  max-width:500px;
+  margin:0 auto 80px;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+.booking-box input,
+.booking-box select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+/* BUTTON */
+.book-btn{
+  width:100%;
+  padding:12px;
+  background:#ff7eb3;
+  color:white;
+  border:none;
+  border-radius:20px;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+
 </head>
+
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-    <div class="nav-container">
-        <div class="logo">TravelSphere</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+<!-- NAVBAR -->
+<header>
+  <div class="logo">TravelSphere</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="#">Booking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<!-- ===== BOOKING SECTION ===== -->
-<section class="booking-section">
-
-    <div class="booking-card">
-        <h1>Book Your Dream Trip ✈️</h1>
-        <p>Fill in your details to confirm your journey</p>
-
-        <form id="bookingForm" class="booking-form">
-
-            <div class="form-row">
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
-            </div>
-
-            <div class="form-row">
-                <input type="tel" id="phone" placeholder="Phone Number" required>
-
-                <select id="destination" required>
-    <option value="">Select Destination</option>
-    <option value="Goa">Goa</option>
-    <option value="Jaipur">Jaipur</option>
-    <option value="Kerala">Kerala</option>
-    <option value="Manali">Manali</option>
-</select>
-            </div>
-
-            <div class="form-row">
-                <input type="date" id="date" required>
-                <textarea id="message" placeholder="Additional Message"></textarea>
-            </div>
-
-            <button type="submit" class="btn-glow">
-                Confirm Booking
-            </button>
-
-        </form>
-    </div>
-
+<!-- TITLE -->
+<section class="page-title">
+  <h1>Book Your Trip</h1>
+  <p>Fill details to confirm booking</p>
 </section>
 
-<footer class="footer">
-    <p>© 2026 TravelSphere | All Rights Reserved</p>
-</footer>
+<!-- FORM -->
+<div class="booking-box">
 
-<script src="script.js"></script>
+  <input type="text" placeholder="Full Name" required>
+  <input type="email" placeholder="Email" required>
+
+  <select>
+    <option>Select Destination</option>
+    <option>Maldives</option>
+    <option>Paris</option>
+    <option>Dubai</option>
+    <option>Bali</option>
+  </select>
+
+  <input type="date">
+  <input type="number" placeholder="Number of People">
+
+  <button class="book-btn" onclick="goToPayment()">Proceed to Payment</button>
+
+</div>
+
 <script>
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // page reload rokne ke liye
-
-    // GA4 Event Fire
-    gtag('event', 'booking_submit', {
-        event_category: 'Booking',
-        event_label: 'Travel Booking Form'
-    });
-
-    alert("Booking submitted successfully!");
-
-    this.reset();
-});
+function goToPayment(){
+  alert("Booking Saved! Redirecting to Payment...");
+  window.location.href = "paytm.html";
+}
 </script>
+
 </body>
 </html>
