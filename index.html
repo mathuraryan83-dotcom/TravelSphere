@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home | TravelSphere</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ29CSHPM2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NJ29CSHPM2');
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelSphere 2.0</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- ===== NAVBAR ===== -->
-<header class="navbar">
-    <div class="nav-container">
-        <div class="logo">TravelSphere</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
+<header>
+  <div class="logo">TravelSphere</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="login-btn">Login</a>
+  </nav>
 </header>
 
-<!-- ===== HERO SECTION ===== -->
+<!-- ===== HERO ===== -->
 <section class="hero">
-    <img src="images/goa.jpg" class="hero-img" alt="Goa Beach">
-
-   <div class="hero-box hero-content">
-<h1>Explore The World With Us 🌍</h1>
-<p>Best Travel Deals Available</p>
-<a href="booking.html" class="btn">Book Now</a>
-   </div>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Explore The World</h1>
+    <p>Discover beautiful destinations with TravelSphere</p>
+    <a href="destinations.html" class="btn">Start Exploring</a>
+  </div>
 </section>
 
 <!-- ===== DESTINATIONS ===== -->
-<section class="gallery">
-    <h2>Popular Destinations</h2>
+<section class="destinations">
+  <h2>Popular Destinations</h2>
 
-    <div class="gallery-container">
-
-        <div class="gallery-card">
-            <img src="images/goa.jpg" alt="Goa">
-            <h3>Goa</h3>
-        </div>
-
-        <div class="gallery-card">
-            <img src="images/jaipur.jpg" alt="Jaipur">
-            <h3>Jaipur</h3>
-        </div>
-
-        <div class="gallery-card">
-            <img src="images/kerela.jpg" alt="Kerala">
-            <h3>Kerala</h3>
-        </div>
-
-        <div class="gallery-card">
-            <img src="images/manali.jpg" alt="Manali">
-            <h3>Manali</h3>
-        </div>
-
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <h3>Maldives</h3>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+      <h3>Paris</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090">
+      <h3>Dubai</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <h3>Bali</h3>
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
-    <p>© 2026 TravelSphere | All Rights Reserved</p>
+<!-- ===== FEATURES ===== -->
+<section class="features">
+  <h2>Why Choose Us</h2>
+
+  <div class="feature-box">
+    <div>💰 Best Prices</div>
+    <div>🛫 Easy Booking</div>
+    <div>📞 24/7 Support</div>
+    <div>⭐ Trusted Service</div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 TravelSphere | Designed by You 😎</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
