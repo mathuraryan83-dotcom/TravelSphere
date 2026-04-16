@@ -115,3 +115,8 @@ footer{
   background:black;
   color:white;
 }
+.method img{
+  width:35px;
+  height:35px;
+  object-fit:contain;
+}
