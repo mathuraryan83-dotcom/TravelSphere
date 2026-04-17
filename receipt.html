@@ -1,60 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Travel Ticket</title>
-<link rel="stylesheet" href="style.css">
-
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receipt | TravelSphere</title>
 
 <style>
 body{
-    font-family:Arial;
-    background:linear-gradient(120deg,#6fb1fc,#4364f7);
-    color:white;
-    text-align:center;
+  font-family:Arial;
+  background:#f5f5f5;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
 }
-.ticket{
-    background:white;
-    color:black;
-    width:350px;
-    margin:80px auto;
-    padding:25px;
-    border-radius:10px;
+
+.receipt-box{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
-button{
-    padding:10px 25px;
-    border:none;
-    border-radius:20px;
-    background:#ff7eb3;
-    color:white;
-    margin-top:15px;
+
+h2{
+  color:green;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="ticket">
-<h2>Travel Ticket</h2>
+<div class="receipt-box">
 
-<p><b>Name:</b> <span id="name"></span></p>
-<p><b>Email:</b> <span id="email"></span></p>
-<p><b>Mobile:</b> <span id="mobile"></span></p>
-<p><b>Destination:</b> <span id="destination"></span></p>
+  <h2>✅ Payment Successful</h2>
 
-<button onclick="downloadTicket()">Download Ticket (PDF)</button>
+  <p><b>Booking Confirmed!</b></p>
+
+  <p>Thank you for choosing TravelSphere ✈️</p>
+
+  <p><b>UPI:</b> mathuraryan83@ptyes</p>
+
+  <a href="index.html">Back to Home</a>
+
 </div>
 
-<script>
-document.getElementById("name").innerText = localStorage.getItem("ticketName");
-document.getElementById("email").innerText = localStorage.getItem("ticketEmail");
-document.getElementById("mobile").innerText = localStorage.getItem("ticketMobile");
-document.getElementById("destination").innerText = localStorage.getItem("ticketDestination");
-
-function downloadTicket(){
-    window.print();   // browser se PDF save option
-}
-</script>
-<script src="script.js"></script>
 </body>
 </html>
